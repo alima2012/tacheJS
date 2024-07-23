@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const age = 17
+        const pays = 'USA'
+        const peutconduireFR = pays === 'FR' && age >= 18
+        const peutconduireUSA = pays === 'USA' && age >= 16
+        switch(pays){
+            case 'FR':
+                console.log("je suis en france")
+                break
+            case 'USA':
+                console.log("je suis aux USA")
+                break
+            default:
+                console.log("vous êtes dans un pays inconnu")
+                break
+        }
+        // if (peutconduireFR || peutconduireUSA)
+        // {
+        //     console.log("vous avez le droit de conduire")
+        // }else{
+        //     console.log("vous n'avez pas le droit de conduire")
+        // }
+    </script>
+</body>
+</html>

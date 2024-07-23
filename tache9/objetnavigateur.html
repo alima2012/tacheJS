@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le BOM</title>
+</head>
+<body>
+    <h1 id="gros_titre">Le BOM</h1>
+    <p></p>
+    <!-- exemple 1 -->
+    <!-- <script>
+        var langue = navigator.language;
+        var navigateur = navigator.appName;
+        var version = navigator.appVersion;
+        var moteur = navigator.product;
+        var cookieA = navigator.cookieEnabled;
+        
+        var para = document.querySelector('p');
+        para.innerHTML = 
+        'Langue utilisée :' + langue +
+        '<br>Nom du navigateur: ' + navigateur +
+        '<br>Version: ' + version +
+        '<br>Moteur: ' + moteur +
+        '<br>Cookie ?:' +cookieA;
+    </script> -->
+    <!-- exemple 2 -->
+     <script>
+            var para = document.querySelector('p');
+            var  loc = navigator.geolocation;
+            (function(){
+                if(loc){
+                    loc.getCurrentPosition(coordonnees);
+                }else{
+                    para.innerHTML = 'Localisation non disponible'
+                }
+            })();
+            function coordonnees(x){
+                para.innerHTML = 
+                    'Latitude :' + x.coords.latitude +
+                    '<br>Longitude :' + x.coords.longitude;
+            }
+     </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+</head>
+<body>
+    <!-- exemple 1 -->
+    <!-- <h1 id="gros_titre">Le BOM</h1>
+    <p>Cliquez pour ouvrir un nouvel onglet</p>
+    <script>
+        var para = document.querySelector('p');
+        para.addEventListener('click', fenetre);
+        function fenetre(){
+            window.open('https://www.pierre-giraud.com/javascript-apprendre-coder-cours/browser-object-model-window/', '_blank', 'width = 500, height = 300');
+        }
+    </script> -->
+
+    <!-- exemple 2 et 3 -->
+    <h1 id="gros_titre">Le BOM</h1>
+    <button id="ouvrir">Ouvrir une nouvelle fenêtre</button>
+    <button id="fermer">Refermer la fenêtre</button>
+    <button id="modifier">Changer la taille</button>
+    <script>
+        var ouvrir = document.getElementById('ouvrir');
+        var fermer = document.getElementById('fermer');
+        var modifier = document.getElementById('modifier');
+        var fenetre = '';
+        ouvrir.addEventListener('click', fOuvrir);
+        modifier.addEventListener('click', fModifier);
+        fermer.addEventListener('click', fFermer);
+        function fOuvrir(){
+            fenetre = window.open('https://www.pierre-giraud.com/javascript-apprendre-coder-cours/browser-object-model-window/', '_blank', 'width = 500');
+        }
+        function fModifier(){
+            fenetre.resizeTo(300,500);
+        }
+        function fFermer(){
+            fenetre.close();
+        }
+    </script>
+    <!-- exemple 3 resize to -->
+    
+</body>
+</html>
